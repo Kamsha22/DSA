@@ -1,18 +1,18 @@
 package StackArray;
 public class StackArray {
     private int maxSize;
-    private int[] stackArray;
+    private int[] stacArray;
     private int top;
 
     public StackArray(int size) {
         maxSize = size;
-        stackArray = new int[maxSize];
+        stacArray = new int[maxSize];
         top = -1;
     }
 
     public void push(int value) {
         if (!isFull()) {
-            stackArray[++top] = value;
+            stacArray[++top] = value;
         } else {
             System.out.println("Stack is full!");
         }
@@ -20,7 +20,7 @@ public class StackArray {
 
     public int pop() {
         if (!isEmpty()) {
-            return stackArray[top--];
+            return stacArray[top--];
         } else {
             System.out.println("Stack is empty!");
             return -1;
@@ -29,7 +29,7 @@ public class StackArray {
 
     public int peek() {
         if (!isEmpty()) {
-            return stackArray[top];
+            return stacArray[top];
         } else {
             System.out.println("Stack is empty!");
             return -1;
@@ -48,7 +48,7 @@ public class StackArray {
         if (!isEmpty()) {
             System.out.print("Stack elements: ");
             for (int i = 0; i <= top; i++) {
-                System.out.print(stackArray[i] + " ");
+                System.out.print(stacArray[i] + " ");
             }
             System.out.println();
         } else {
